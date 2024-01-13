@@ -16,6 +16,19 @@ def install_yt_dlp():
 # Call the function to check and install yt-dlp if necessary
 install_yt_dlp()
 
+def install_ffmpeg():
+    try:
+        # Check if ffmpeg is installed
+        subprocess.run(["python", "-m", "ffmpeg", "-version"], check=True)
+        print("ffmpeg is already installed.")
+    except subprocess.CalledProcessError:
+        # ffmpeg is not installed, so install it
+        subprocess.run(["python", "-m", "pip", "install", "ffmpeg"])
+        print("ffmpeg has been installed.")
+
+# Call the function to check and install ffmpeg if necessary
+install_ffmpeg()
+
 def download_video():
     # Reset progress bar and result label
     progress_bar["mode"] = "determinate"
