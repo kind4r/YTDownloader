@@ -5,8 +5,8 @@ import subprocess
 url = input("Enter the URL of the video to download: ")
 
 # Prompt for download path
-# default_path = os.path.join(os.path.expanduser("~"), "Downloads")
-default_path = r"E:\Downloads\Youtube_dl"
+default_path = os.path.join(os.path.expanduser("~"), "Downloads")
+# default_path = r"E:\Downloads\Youtube_dl"
 path = input(f"Enter the path to save the file (default: {default_path}): ")
 if not path:
     path = default_path
