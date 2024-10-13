@@ -115,7 +115,3 @@ result_label.pack()
 
 # Run the GUI
 root.mainloop()
-
-#pip install pyinstaller
-
-#pyinstaller --onefile --icon=ytb.ico GUI.py
